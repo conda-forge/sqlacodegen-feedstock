@@ -1,8 +1,6 @@
 About sqlacodegen
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
-
 Home: http://pypi.python.org/pypi/sqlacodegen/
 
 Package license: MIT
@@ -16,8 +14,15 @@ Summary: Automatic model code generator for SQLAlchemy
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/sqlacodegen-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/sqlacodegen-feedstock)
+
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2602&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/sqlacodegen-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
@@ -50,6 +55,8 @@ conda search sqlacodegen --channel conda-forge
 
 About conda-forge
 =================
+
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
