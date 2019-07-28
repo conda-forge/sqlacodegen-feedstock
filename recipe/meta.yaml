@@ -1,6 +1,6 @@
 {% set name = "sqlacodegen" %}
-{% set version = "2.0.1" %}
-{% set sha256 = "160bbb269902607212a1e70ccc5374ceb41804e642c172cd230d88b974f620f5" %}
+{% set version = "2.1.0" %}
+{% set sha256 = "eae258e36c3dce8dd9543d35a234552d4e37ab5561072b3fb08543c7e881107c" %}
 
 package:
   name: {{ name|lower }}
@@ -22,12 +22,12 @@ requirements:
   host:
     - python
     - pip
-    - setuptools
-    - setuptools_scm
+    - setuptools  >=36.2.7
+    - setuptools_scm  >=1.7.0
 
   run:
     - python
-    - sqlalchemy >=0.8.0
+    - sqlalchemy >=0.9.0
     - inflect >=0.2.0
 
 test:  
