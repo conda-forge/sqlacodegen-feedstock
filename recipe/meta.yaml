@@ -1,6 +1,6 @@
 {% set name = "sqlacodegen" %}
-{% set version = "2.1.0" %}
-{% set sha256 = "eae258e36c3dce8dd9543d35a234552d4e37ab5561072b3fb08543c7e881107c" %}
+{% set version = "2.2.0" %}
+{% set sha256 = "83e7ae401398cc1ae8324722a3294d7faadb694347cb7e2c0fb8c15a3f1eb515" %}
 
 package:
   name: {{ name|lower }}
@@ -14,8 +14,8 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed . 
-  entry_points: 
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  entry_points:
     - sqlacodegen = sqlacodegen.main:main
 
 requirements:
@@ -30,14 +30,15 @@ requirements:
     - sqlalchemy >=0.9.0
     - inflect >=0.2.0
 
-test:  
+test:
   imports:
     - sqlacodegen
 
 about:
   home: http://pypi.python.org/pypi/sqlacodegen/
   license: MIT
-  summary: 'Automatic model code generator for SQLAlchemy'
+  license_file: LICENSE
+  summary: Automatic model code generator for SQLAlchemy
   license_family: MIT
 
 extra:
