@@ -5,7 +5,7 @@ Home: http://pypi.python.org/pypi/sqlacodegen/
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Automatic model code generator for SQLAlchemy
 
