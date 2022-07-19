@@ -12,10 +12,10 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
-    - sqlacodegen = sqlacodegen.main:main
+    - sqlacodegen = sqlacodegen.cli:main
 
 requirements:
   host:
@@ -34,6 +34,8 @@ requirements:
 test:
   imports:
     - sqlacodegen
+  commands:
+    - sqlacodegen --help
 
 about:
   home: http://pypi.python.org/pypi/sqlacodegen/
