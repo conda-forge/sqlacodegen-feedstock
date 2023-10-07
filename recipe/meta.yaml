@@ -1,6 +1,6 @@
 {% set name = "sqlacodegen" %}
-{% set version = "3.0.0rc1" %}
-{% set sha256 = "c3e885cfb913cb9f8aa47e6e0c0e03e079dcee65de8290fd502d978c3be2041a" %}
+{% set version = "3.0.0rc3" %}
+{% set sha256 = "dbc05fd56e0622abd4f76817c935ca84ae360c538279678263b5b75000b81ccc" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - sqlacodegen = sqlacodegen.cli:main
@@ -21,15 +21,16 @@ requirements:
   host:
     - python
     - pip
-    - setuptools  >=42
-    - setuptools_scm  >=3.4
-
+    - setuptools >=64
+    - setuptools_scm >=6.4
   run:
     - python
-    - dataclasses  # [py<37]
+    - greenlet >=3.0.0  # [py>=312]
     - importlib_metadata  # [py<310]
     - inflect >=4.0.0
     - sqlalchemy >=1.4.36
+  run_constrained:
+    - geoalchemy2 >=0.11.1
 
 test:
   imports:
