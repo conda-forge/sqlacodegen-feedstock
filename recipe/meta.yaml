@@ -8,11 +8,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -20,12 +20,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools >=64
     - setuptools_scm >=6.4
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - importlib_metadata
     - inflect >=4.0.0
     - sqlalchemy >=2.0.23
@@ -36,6 +36,8 @@ requirements:
     - pgvector >=0.2.4
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - sqlacodegen
   commands:
