@@ -1,6 +1,6 @@
 {% set name = "sqlacodegen" %}
-{% set version = "3.1.1" %}
-{% set sha256 = "74320dba323d20db7d6a6a29de42d1c9dec2b80ef104ce5a8b1eb7a51e56a9d3" %}
+{% set version = "3.2.0" %}
+{% set sha256 = "ce2a8a3c422bee40a58e9469befd4aec87a160f37158acbcc1c05e9d1c2e786d" %}
 
 package:
   name: {{ name|lower }}
@@ -26,9 +26,8 @@ requirements:
     - setuptools_scm >=6.4
   run:
     - python >={{ python_min }}
-    - importlib-metadata
     - inflect >=4.0.0
-    - sqlalchemy >=2.0.29,<2.0.42
+    - sqlalchemy >=2.0.29
   run_constrained:
     - geoalchemy2 >=0.17.0
     - sqlmodel >=0.0.22
