@@ -1,6 +1,6 @@
 {% set name = "sqlacodegen" %}
-{% set version = "4.0.1" %}
-{% set sha256 = "98da03f3bf68e7966af609c5431b4706adb9c744a1690c01101298b05dc402f9" %}
+{% set version = "4.0.2" %}
+{% set sha256 = "b9373419f202c6697d3b934298ca9fa745ededb01b1837c7967d656a3ae94137" %}
 
 package:
   name: {{ name|lower }}
